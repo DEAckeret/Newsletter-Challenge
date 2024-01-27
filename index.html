@@ -11,14 +11,24 @@
 <body class="bg-info">
 
 
-    <div class="container-lg">
-        <div class="row bg-white">
-            <div class="col-sm-5 px-0 px-sm-2">
-                <img src = "assets/images/illustration-sign-up-mobile.svg" alt="illustration sign up" class="img-fluid">
+    <div class="container-lg d-md-flex align-items-md-center min-vh-100">
+        <div class="row bg-white rounded-5 p-sm-3">
+            <div class="col-sm-5 px-0 px-sm-2 order-md-2">
+                <img src = "assets/images/illustration-sign-up-mobile.svg" alt="illustration sign up" class="img-fluid" id="news-image">
             </div>
-            <div class="col-sm-7">
+            <div class="col-sm-7 order-md-1 pb-decendents">
                 <h1 class="text-secondary display-3 bold-text">Stay updated!</h1>
                 <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                <ul class="pb-decendents">
+                    <li class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+                <form class="pb-decendents">
+                    <label class="fs-custom-14 bold-text">Email address</label>
+                    <input type="text" name="email" id="email" placeholder="email@company.com" class="form-control mb-3 p-3">
+                </form>
+                <button class="btn btn-secondary btn-lg mb-3 fs-6">Subscribe to monthly newsletter</button>
             </div>
         </div>
     </div>

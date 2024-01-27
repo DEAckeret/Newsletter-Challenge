@@ -1,13 +1,36 @@
-/* @font-face {
-    font-family: 'Roboto-Regular';
-    src: url('/assets/fonts/Roboto-Regular.ttf');
+button {
+    font-family: inherit;
+    width: 327px;
+    height: 57px;
 }
 
-@font-face {
-    font-family: 'Roboto-Bold';
-    src: url('/assets/fonts/Roboto-Bold.ttf');
+
+ul {
+   list-style-type: none; 
 }
 
-body {
-    font-family: 'Roboto-Regular';
-} */
+li {
+    position: relative;
+    
+}
+
+li::before {
+    content: "";
+    display: inline-block;
+    height: 20px; /* Adjust based on your needs */
+    width: 20px; /* Adjust based on your needs */
+    background: url('/assets/images/icon-list.svg') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    left: -2rem;
+}
+
+.pb-decendents {
+    > * {
+        padding-bottom: .75rem; /* Adjust as needed */
+    }
+}
+
+.fs-custom-14 {
+    font-size: 14px;
+}
