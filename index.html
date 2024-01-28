@@ -11,24 +11,34 @@
 <body class="bg-info">
 
 
-    <div class="container-lg d-md-flex align-items-md-center min-vh-100">
-        <div class="row bg-white rounded-5 p-sm-3 py-sm-4">
-            <div class="col-sm-5 px-0 px-sm-2 order-md-2">
+    <div class="container-lg d-md-flex align-items-md-center min-vh-100 ">
+        <div class="row bg-white rounded-sm-5 p-sm-3 py-sm-4 vh-sm-100 align-items-start align-items-md-center">
+            <div class="col-lg-5 px-0 px-lg-2 order-md-2 default-menu">
                 <img src = "assets/images/illustration-sign-up-mobile.svg" alt="illustration sign up" class="img-fluid" id="news-image">
             </div>
-            <div class="col-sm-7 order-md-1 pb-decendents">
-                <h1 class="text-secondary display-3 bold-text mt-4 pt-lg-5">Stay updated!</h1>
-                <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <div class="col-lg-7 order-md-1 pb-decendents px-sm-5 px-lg-5 d-flex flex-column justify-content-center default-menu">
+                <h1 class="text-secondary display-3 bold-text">Stay updated!</h1>
+                <p class="text-secondary">Join 60,000+ product managers receiving monthly updates on:</p>
                 <ul class="pb-decendents">
-                    <li class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li class="text-secondary">Product discovery and building what matters.</li>
+                    <li class="text-secondary">Measuring to ensure updates are a success.</li>
+                    <li class="text-secondary">And much more!</li>
                 </ul>
                 <form class="pb-decendents">
+                    <div class="d-flex justify-content-between">
                     <label class="fs-custom-14 bold-text">Email address</label>
+                    <span class="fs-custom-14 bold-text text-primary d-none" id="error-message">Valid email required</span>
+                    </div>
                     <input type="text" name="email" id="email" placeholder="email@company.com" class="form-control mb-3 p-3">
+                    <button type="submit" id="email-submit" class="btn btn-secondary btn-lg mb-sm-3 mb-md-0 fs-6">Subscribe to monthly newsletter</button>
                 </form>
-                <button class="btn btn-secondary btn-lg mb-3 fs-6">Subscribe to monthly newsletter</button>
+            </div>
+
+            <div id="success-menu">
+                <img src="/assets/images/icon-success.svg">
+                <h1>Thanks for subscribing!</h1>
+                <p>A confirmation email has been sent to <span class="bold-text" id="user-email"></span>. Please open it and click the button inside to confirm your subscription.</p>
+                <button class="btn btn-secondary btn-lg mb-3 fs-6" id="dismiss-button">Dismiss message</button>
             </div>
         </div>
     </div>
