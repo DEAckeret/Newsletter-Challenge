@@ -34,12 +34,17 @@ $(document).ready(function() {
 
             $('.default-menu').hide();
             $('.default-menu:eq(1)').removeClass('d-flex');
-            $('#success-menu').show();
+
+            $('#success-menu').removeClass('d-none');
+            $('#success-menu').addClass('d-flex');
+
             $('#user-email').text(email);
+            $('#content-row').removeClass('align-items-start').addClass('align-items-center');
         } else {
             console.log('Invalid email');
 
             $('#error-message').removeClass('d-none');
+            $('.form-control').addClass('error');
             
         }
     });
@@ -55,9 +60,15 @@ $(document).ready(function() {
 
         $('.default-menu').show();
         $('.default-menu:eq(1)').addClass('d-flex');
+
+        $('#success-menu').removeClass('d-flex');
+        $('#success-menu').addClass('d-none');
+
         $('#error-message').addClass('d-none');
-        $('#success-menu').hide();
+        $('.form-control').removeClass('error');
+
         $('#user-email').text('');
         $('#email').val('');
+        $('#content-row').addClass('align-items-start').removeClass('align-items-center');
     });
 });
