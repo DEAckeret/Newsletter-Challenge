@@ -48,6 +48,9 @@ button:active, button:focus {
     .position-md-static.position-relative {
         position: static !important;
     }
+    .max-width-md-55 {
+        max-width: 55vh !important;
+    }
 }
 
 @media (max-width: 576px) {

@@ -11,8 +11,8 @@
 <body class="bg-info">
 
 
-    <div class="container-lg d-md-flex align-items-md-center min-vh-100 ">
-        <div id="content-row" class="row bg-white rounded-sm-5 p-sm-3 py-sm-4 vh-sm-100 align-items-start align-items-md-center">
+    <div class="container-lg d-md-flex align-items-md-center min-vh-100 justify-content-center">
+        <div id="content-row" class="row bg-white rounded-sm-5 p-sm-3 py-sm-4 vh-sm-100 align-items-start align-items-md-center justify-content-center">
             <div class="col-lg-5 px-0 px-lg-2 order-md-2 default-menu">
                 <img src = "assets/images/illustration-sign-up-mobile.svg" alt="illustration sign up" class="img-fluid" id="news-image">
             </div>
@@ -26,7 +26,7 @@
                 </ul>
                 <form class="pb-decendents">
                     <div class="d-flex justify-content-between">
-                    <label class="fs-custom-14 bold-text">Email address</label>
+                    <label class="fs-custom-14 bold-text text-secondary">Email address</label>
                     <span class="fs-custom-14 bold-text text-primary d-none" id="error-message">Valid email required</span>
                     </div>
                     <input type="text" name="email" id="email" placeholder="email@company.com" class="form-control mb-3 p-3">
@@ -34,10 +34,10 @@
                 </form>
             </div>
 
-            <div id="success-menu" class="flex-column gap-3 flex-wrap align-items-start position-absolute position-md-static">
+            <div id="success-menu" class="flex-column gap-3 flex-wrap align-items-start position-absolute position-md-static max-width-md-55 px-md-5 py-md-4">
                 <img src="/assets/images/icon-success.svg">
-                <h1>Thanks for subscribing!</h1>
-                <p>A confirmation email has been sent to <span class="bold-text" id="user-email"></span>. Please open it and click the button inside to confirm your subscription.</p>
+                <h1 class="text-secondary display-4 bold-text pt-3">Thanks for subscribing!</h1>
+                <p class="text-secondary">A confirmation email has been sent to <span class="bold-text text-secondary" id="user-email"></span>. Please open it and click the button inside to confirm your subscription.</p>
                 <button class="btn btn-secondary btn-lg mb-3 fs-6 position-relative position-md-static custom-top-10" id="dismiss-button">Dismiss message</button>
             </div>
         </div>
