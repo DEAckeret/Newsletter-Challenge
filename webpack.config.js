@@ -2,10 +2,13 @@
 const path = require('path');
 
 module.exports = {
-    entry: './index.js',
+    entry: {
+        dustinNewsletter : './index.js',
+        jquery: 'jquery'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'dustin-newsletter-webpack.bundle.js', 
+        filename: '[name]-webpack.bundle.js', 
     },
     devServer: {
         static: path.resolve(__dirname, 'dist'),
