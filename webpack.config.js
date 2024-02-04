@@ -1,15 +1,23 @@
-
 const path = require('path');
+const webpack = require('webpack'); // Include webpack to access its plugins
 
 module.exports = {
     entry: {
-        dustinNewsletter : './index.js',
-        jquery: 'jquery'
+        dustinNewsletter: './index.js',
+        jquery: '/node_modules/jquery/dist/jquery.js',
+        bootstrap: "./node_modules/bootstrap/dist/js/bootstrap.min.js"
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name]-webpack.bundle.js', 
+        filename: '[name]-webpack.bundle.js',
     },
+    plugins: [
+        // Automatically load jQuery when $ or jQuery is used
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        })
+    ],
     devServer: {
         static: path.resolve(__dirname, 'dist'),
         port: 9000,
