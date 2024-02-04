@@ -23,7 +23,7 @@ li::before {
     display: inline-block;
     height: 20px; /* Adjust based on your needs */
     width: 20px; /* Adjust based on your needs */
-    background: url('/assets/images/icon-list.svg') no-repeat center center;
+    background: url('./assets/images/icon-list.svg') no-repeat center center;
     background-size: contain;
     position: absolute;
     left: -2rem;
