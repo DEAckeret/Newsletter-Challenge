@@ -31,6 +31,7 @@ $(document).ready(function() {
         var email = $('#email').val(); 
         if (isValidEmail(email)) {
             console.log('Valid email');
+            $('#email').removeAttr('aria-describedby');
 
             $('.default-menu').hide();
             $('.default-menu:eq(1)').removeClass('d-flex');
@@ -42,6 +43,7 @@ $(document).ready(function() {
             $('#content-row').removeClass('align-items-start').addClass('align-items-center');
         } else {
             console.log('Invalid email');
+            $('#email').attr('aria-describedby', 'error-message');
 
             $('#error-message').removeClass('d-none');
             $('.form-control').addClass('error');
@@ -69,6 +71,7 @@ $(document).ready(function() {
 
         $('#user-email').text('');
         $('#email').val('');
+        $('#email').removeAttr('aria-describedby');
         $('#content-row').addClass('align-items-start').removeClass('align-items-center');
     });
 });
