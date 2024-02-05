@@ -28,7 +28,7 @@ $(document).ready(function() {
     $('#email-submit').on('click', function(event) {
         event.preventDefault();
 
-        var email = $('#email').val(); // assuming the id of your email input field is 'email'
+        var email = $('#email').val(); 
         if (isValidEmail(email)) {
             console.log('Valid email');
 
